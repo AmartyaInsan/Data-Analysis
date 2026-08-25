@@ -1,0 +1,19 @@
+# Local data and generated pipeline outputs
+data/raw/
+data/silver/
+data/gold/
+data/datamart/
+data/_logs/
+artifacts/
+logs/
+*.parquet
+
+# Python and notebook state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.ipynb_checkpoints/
+
+# Environment settings
+.env
