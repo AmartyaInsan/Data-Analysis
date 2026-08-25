@@ -25,8 +25,37 @@ then aggregated into business-ready summaries:
 ## Architecture
 
 ```
-TXT Files → Bronze (raw) → Silver (cleaned & typed) → Gold (star schema)
-          → Data Mart (CSV) → Business Analysis (KPIs & insights)
+                    PT ANEKA SPORT
+                         │
+              Raw TXT / Source Data
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │   BRONZE    │
+                  │ Raw ingestion│
+                  └──────┬──────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │   SILVER    │
+                  │ Cleaned     │
+                  │ Typed       │
+                  │ Deduplicated│
+                  │ Parquet     │
+                  └──────┬──────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │    GOLD     │
+                  │ Star Schema │
+                  └──────┬──────┘
+                         │
+              ┌──────────┴──────────┐
+              ▼                     ▼
+        Data Mart              Spark SQL
+              │                     │
+              ▼                     ▼
+          Power BI              KPI / Insights
 ```
 
 ## Tech stack
