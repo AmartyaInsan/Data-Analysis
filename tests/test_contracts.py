@@ -7,7 +7,7 @@ from aneka_sport_pipeline.contracts import (
 
 
 def test_parse_header_trims_pipe_pair_delimited_fields():
-    assert parse_header(" INVUNIQ || ITEM || QTYSHIPPED\\n") == (
+    assert parse_header(" INVUNIQ || ITEM || QTYSHIPPED\n") == (
         "INVUNIQ",
         "ITEM",
         "QTYSHIPPED",
