@@ -2,8 +2,6 @@
 
 An end-to-end PySpark portfolio project that turns raw sales, customer, product, and inventory exports into an analysis-ready warehouse and Power BI data marts.
 
-![Quality checks](https://github.com/AmartyaInsan/Data-Analysis/actions/workflows/quality.yml/badge.svg)
-
 The pipeline follows a Bronze → Silver → Gold design:
 
 1. **Bronze** — ingest pipe-delimited source exports as received.
